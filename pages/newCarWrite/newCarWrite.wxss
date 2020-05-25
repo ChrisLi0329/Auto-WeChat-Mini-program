@@ -1,0 +1,291 @@
+/* miniprogram/pages/newCarWrite/newCarWrite.wxss */
+/* pages/sales/sales.wxss */
+.topBar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Lline{
+width: 40%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+}
+
+.Rline{
+width: 40%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+
+}
+
+.tbText {
+  color:#989898;
+  font-size: 30rpx;
+  
+}
+
+.line{
+width: 30%;
+margin-bottom: 20rpx;
+margin-top: 5rpx;
+border-top:1px #989898 solid;
+}
+
+.saleInfoBox{
+  width: 100%
+}
+
+
+
+.picBox{
+  padding: 10rpx;
+}
+
+.nameBox{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #989898;
+  padding: 20rpx;
+}
+
+.textName {
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.nameInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.numberBox{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #989898;
+  padding: 20rpx;
+}
+
+.textNumber {
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.numberInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.carInfoBox {
+  padding: 10rpx;
+}
+
+.brandBox{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+
+.brandPicker{
+ width: 70%;
+ font-size: 0.8rem;
+ color: #989898;
+}
+.brandText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.carYear{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+
+.yearText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.yearInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.returnData{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+
+.dateText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.dateInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.km{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+
+.kmText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+.kmInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.restkm{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+
+.restkmText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.restkmInput{
+  width:70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.monthlyPay{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.monthlyPayText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.monthlyPayInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.price{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.priceText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+.priceInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.dp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.dpText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.dpInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.moreInfoBox{
+  padding: 10rpx;
+}
+
+.textArea {
+  padding: 0 25rpx;
+  
+  border: 1rpx solid #989898;
+}
+
+
+
+.w100{
+  display: flex;
+  flex-direction: row;
+}
+
+.submitButton {
+  width: 50%;
+}
+
+.submit{
+  padding: 30rpx;
+}
+.image-group{
+  display: flex;
+  white-space:nowrap;
+  margin-top: 30px;
+}
+
+.image-group view {
+  display: inline-block;
+  flex-direction: row;
+  width: 375rpx;
+  height: 375rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  background-color: #989898;
+}
+
+.image-group view image{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.image-group view icon {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+}

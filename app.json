@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/home",
+    "pages/buy/buy",
+    "pages/contact/contact",
+    "pages/detail/detail",
+    "pages/newCar/newCar",
+    "pages/new_detail/new_detail",
+    "pages/rent/rent",
+    "pages/rent_detail/rent_detail",
+    "pages/sales/sales",
+    "pages/newCarWrite/newCarWrite",
+    "pages/rentCarWrite/rentCarWrite"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "THUNDER",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

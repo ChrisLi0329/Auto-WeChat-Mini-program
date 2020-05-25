@@ -1,0 +1,222 @@
+/* miniprogram/pages/rentCarWrite/rentCarWrite.wxss */
+.topBar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Lline{
+width: 40%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+}
+
+.Rline{
+width: 40%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+
+}
+
+.tbText {
+  color:#989898;
+  font-size: 30rpx;
+  
+}
+
+.line{
+width: 30%;
+margin-bottom: 20rpx;
+margin-top: 5rpx;
+border-top:1px #989898 solid;
+}
+
+
+
+.picBox{
+  padding: 10rpx;
+}
+
+.carInfoBox {
+  padding: 10rpx;
+}
+
+.brandBox{
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+
+.brandPicker{
+ width: 70%;
+ font-size: 0.8rem;
+ color: #989898;
+}
+.brandText{
+  width: 30%;
+  font-size: 0.8rem;
+}
+
+.monthPay{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.monthPayText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.monthPayInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.dayPay{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.dayPayText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.dayPayInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.weekPay{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.weekPayText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.weekPayInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+
+.backC{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.backCText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.backCInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.blue{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.blueText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.blueInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+.navi{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #989898;
+}
+.naviText {
+  width: 30%;
+  font-size: 0.8rem;
+}
+.naviInput{
+  width: 70%;
+  font-size: 0.8rem;
+  color: #989898;
+}
+
+
+.moreInfoBox{
+  padding: 10rpx;
+}
+
+.textArea {
+  padding: 0 25rpx;
+  
+  border: 1rpx solid #989898;
+}
+
+
+
+.w100{
+  display: flex;
+  flex-direction: row;
+}
+
+.submitButton {
+  width: 50%;
+}
+
+.submit{
+  padding: 30rpx;
+}
+.image-group{
+  display: flex;
+  white-space:nowrap;
+  margin-top: 30px;
+}
+
+.image-group view {
+  display: inline-block;
+  flex-direction: row;
+  width: 375rpx;
+  height: 375rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  background-color: #989898;
+}
+
+.image-group view image{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.image-group view icon {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+}

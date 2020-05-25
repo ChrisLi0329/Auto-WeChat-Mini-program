@@ -1,0 +1,154 @@
+<view class='detail-container'>
+  
+  <view class='swiper-container' style='position:absoulte'>
+    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+      <block wx:for="{{topic.images}}" wx:for-index="idx">
+        <swiper-item>
+         <image class='content-img' src='{{item}}' mode='aspectFill' bindtap="previewImg" data-index='{{idx}}'  style="position:relative"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='shuiyin' style='position:relative'>
+    <image class='shuiyinpic' src='/images/thunder.png' style='height: 20px; width: 100px'></image>
+  </view>
+  <view class='car_detail'>
+    <view class='car_detail_head'><view class='head'>{{topic.year}} {{topic.mode}}</view> <view class='dujia'><image class='dujia1' src='/images/dujia.png' style="height:20px; width: 100px" /></view></view>
+    
+   
+  
+    
+    <view class='car_price_box'>
+      <view class='car_price'>
+        <i class='wan'>拿回:</i>
+        ${{topic.dpBack}}
+      </view>
+      <view class='newdp'>原首付：${{topic.dp}}</view>
+    </view>
+  </view>
+
+  <view class='personal_info_box' wx:if="{{openid ==  'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
+    <view class='personal_info_title'>
+      <view class='title_label'></view>
+      <view class='title_info'>个人信息</view>
+    </view>
+    <view class='personal_info'>
+      <view class='name'>姓名：{{topic.name}}</view>
+      <view class='number'>电话号码：{{topic.number}}</view>
+    </view>
+  </view>
+
+
+  <view class='car_info_box'>
+    <view class='car_info_title'>
+      <view class='title_label'></view>
+      <view class='title_info'>车辆信息</view>
+    </view>
+    <view class='car_info'>
+      <view class='car_info_item_box'>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text5" style="color:#abafb3;font-size:14px">汽车年份</text>
+          </view>
+          
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.year}} </text>
+          </view>
+        </view>
+        <span>--------</span>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text11" style="color:#abafb3;font-size:14px">还车时间</text>
+          </view>
+          
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.dates}}</text>
+          </view>
+        </view>
+      </view>
+      
+      <view class='car_info_item_box'>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text5" style="color:#abafb3;font-size:14px">公里数</text>
+          </view>
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.km}}km</text>
+          </view>
+        </view>
+        <span>--------</span>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text11" style="color:#abafb3;font-size:14px">剩余公里数</text>
+          </view>
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.restKm}}km</text>
+          </view>
+        </view>
+      </view>
+      
+      <view class='car_info_item_box1'>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text5" style="color:#abafb3;font-size:14px">税后月供</text>
+          </view>
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">${{topic.mPay}}</text>
+          </view>
+        </view>
+        <span>--------</span>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text11" style="color:#abafb3;font-size:14px">原首付</text>
+          </view>
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">${{topic.dp}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  
+<checkbox-group class='checkboxGroup'>
+    <label class="checkbox" wx:for="{{topic.check}}">
+
+      <radio checked='true'/>{{item}}
+    </label>
+
+  <label class='checkbox'wx:for="{{items}}">
+    <radio checked=''/>{{item}}
+  </label>
+</checkbox-group>
+
+  <view class='moreInfo-box'>
+    <view class='more_info_title'>
+      <view class='title_label'></view>
+      <view class='title_info'>更多信息</view>
+    </view>
+    <view class='moreInfo'>
+      <text class='content-text'>{{topic.content}}</text>
+      
+    </view>
+    
+  </view>
+  <view class='liulan'>浏览数：{{topic.liulan}}次</view>
+  
+  <view class="footer-box" wx:if="{{openid !=  'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
+    <view class='footer-button'>
+      <button open-type="share" class='share-btn'>分享给好友</button>
+    </view>
+    <view class='footer-button'>
+      <button open-type='contact' class="contact-btn">联系客服</button>
+    </view>
+  </view>
+  <view class="footer-box" wx:if="{{openid == 'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
+    <view class='footer-button'>
+      <button bindtap='handleDelete' class='contact-btn'>删除</button>
+    </view>
+
+  </view>
+</view>
+
+

@@ -1,0 +1,95 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <!-- 首页图片 -->
+  <view class="picContainer">
+    <image class="homepic" mode="scaleToFill" src="/images/homepic.jpeg"></image>
+  </view>
+
+  <!-- 首页导航栏-->
+  <view class="navBlock">
+  
+    <!-- 我要买车-->
+    <view class="buy" bindtap='gobuy'>
+      <view class="mainText">
+        <text>我要买车</text>
+      </view>
+      <view class="subText">
+        <text>转lease，二手车</text>
+      </view>
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+
+    <!-- 我要卖车 -->
+    <view class="sales" bindtap='gosale' >
+      <view class="mainText">
+        <text>我要卖车</text>
+      </view>
+      <view class="subText">
+        <text>转lease，二手车</text>
+      </view>
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+
+
+    <!-- 新车特惠 -->
+    <view class="newCar" bindtap='gonewCar'>
+      <view class="mainText">
+        <text>新车特惠</text>
+      </view>
+      
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+
+    <!--我要租车-->
+    <view class="rent" bindtap='gorent'>
+      <view class="mainText">
+        <text>我要租车</text>
+      </view>
+      
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+
+    <!-- 新车特惠输入 -->
+    <view class="newCarInput" bindtap='gonewCarInput' wx:if="{{openid == 'ojg5a5Kl0Xo60V8bouP40CbBeR0U'||openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc'}}">
+      <view class="mainText">
+        <text>新车特惠输入</text>
+      </view>
+      
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+
+      <!-- 租车输入 -->
+    <view class="rentCarInput" bindtap='gorentCarInput' wx:if="{{openid == 'ojg5a5Kl0Xo60V8bouP40CbBeR0U'|| openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc'}}">
+      <view class="mainText">
+        <text>租车输入</text>
+      </view>
+      
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+
+    <!-- 联系客服 -->
+    <view class="contact" bindtap='gocontact'>
+      <view class="mainText">
+        <text>联系客服</text>
+      </view>
+      <view class="subText">
+        <text>专业解答您所有的疑惑问题</text>
+      </view>
+      <view class='line'></view>
+      <view class="icon">
+      </view>
+    </view>
+  </view>
+</view>

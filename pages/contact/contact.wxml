@@ -1,0 +1,18 @@
+<!--pages/contact/contact.wxml-->
+
+<!--联系客服的top bar-->
+<view class="topBar">
+  <view class="Lline"></view>
+  <text class="tbText">联系客服</text>
+  <view class="Rline"></view>
+</view>
+
+<!--客服二维码-->
+<view class="QRCode">
+  <image src="/images/QR.jpg" class="QR"></image>
+</view>
+
+<!--二维码下的文字-->
+<view class="QRText">
+  <text>扫描上方二维码，即刻添加</text>
+</view>

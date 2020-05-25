@@ -1,0 +1,127 @@
+<!--pages/sales/sales.wxml-->
+
+<!--新车输入的top bar-->
+<view class="topBar">
+  <view class="Lline"></view>
+  <text class="tbText">新车</text>
+  <view class="Rline"></view>
+</view>
+
+<form bindsubmit='formSubmit'>
+<!--卖车内容-->
+<view class="saleInfoBox">
+
+  <!--上传图片-->
+  <view class='picBox'>
+    <view class='picText'>上传图片</view>
+    <view class='line'></view>
+    <view class='picUploadBox'>
+      <button type='default' size='default' bindtap='chooseImage'>
+        添加图片（最少3张，最多6张）
+      </button>
+    </view>
+
+    <scroll-view class='image-group' scroll-x = 'true'>
+      <block wx:for='{{images}}' wx:for-index='idx'>
+      <view>
+        <image src='{{images[idx]}}' mode='aspectFill' bindtap='previewImg'></image>
+        <icon type='clear' bindtap='removeImg' data-index='{{idx}}'></icon>
+      </view>
+      </block>
+
+    </scroll-view>
+
+
+  </view>
+
+  <!--车辆信息-->
+  <view class="carInfoBox">
+    <view class='carInfo'>车辆信息</view>
+    <view class='line'></view>
+    <view class='carInputBox'>
+
+      <!--汽车品牌-->
+      <view class='brandBox'>
+        <view class='brandText'>汽车品牌：</view>
+        <view class='brandPicker'>
+          <picker name='input-mode'mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class='picker'>
+            {{multiArray[0][multiIndex[0]]}}  {{multiArray[1][multiIndex[1]]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      <!--日期-->
+      <view class='date'>
+        <view class="carYear">
+          <view class='yearText'>车辆年份:</view>
+          <view class='yearInput'>
+             <input name='input-year' value='{{textYear}}' class='year' placeholder='输入车辆年份'/>
+          </view>
+        </view>
+
+        <view class='returnData'>
+          <view class='dateText'>lease时长: </view>
+          <view class='dateInput'>
+            <input name='input-period' value = '{{returnYear}}' calss='return' placeholder='输入lease时长'/>
+          </view>
+        </view>
+      </view>
+      <!--公里数-->
+      <view class='gongli'>
+        <view class='km'>
+          <view class='kmText'>可行驶公里数:</view>
+          <view class='kmInput'>
+            <input name='input-km' value='{{textKm}}' class='kmNow' placeholder='输入公里数'/>
+          </view>
+        </view>
+
+        
+      </view>
+      <!--付款-->
+      <view class='pay'>
+        <view class='monthlyPay'id='pay'>
+          <view class='monthlyPayText'>税后月供: </view>
+          <view class='monthlyPayInput'>
+            <input name='input-mPay' value='{{textMPay}}' placeholder='输入税后月供金额'/>
+          </view>
+        </view>
+
+        <view class='price' id='pay'>
+          <view class='priceText'>原车价格: </view>
+          <view class='priceInput'>
+            <input name='input-price' value='{{price}}' placeholder='输入原车价格'/>
+          </view>
+        </view>
+
+        <view class='dp'id='pay'>
+          <view class='dpText'>首付: </view>
+          <view class='dpInput'>
+            <input name='input-dp' value='{{textdp}}' placeholder='输入首付'/>
+          </view>
+        </view>
+      </view>
+      
+      
+
+    </view>
+  </view>
+  
+
+  <!--更多信息-->
+  <view class="moreInfoBox">
+  <view class='moreInfo'>更多信息</view>
+  <view class='line'></view>
+  <view class='textArea'>
+    <textarea style='height: 7em' name="input-content" type="text" placeholder="说点什么吧~" placeholder-class="holder" value="{{textContent}}" bindblur='getTextAreaContent'/>
+  </view>
+  </view>
+</view>
+
+<!--提交-->
+<view class='submit'>
+  <button size='default' class='submitButton' formType='submit' open-type='getUserInfo'>提交</button>
+</view>
+
+</form>

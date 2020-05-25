@@ -1,0 +1,123 @@
+<!--pages/buy/buy.wxml-->
+
+<!--我要买车top bar-->
+<view class="topBar">
+  <view class="Lline"></view>
+  <text class="tbText">我要买车</text>
+  <view class="Rline"></view>
+</view>
+
+<!--各种分类-->
+<view class="sortbutton">
+  <!--车型-->
+  <view class="type">
+    <view wx:for="{{typeList}}" wx:key="typeList">
+      <button class="{{index==idxT?'_ctype':'ctype'}}" bindtap='goTypeIndex' data-index="{{index}}">{{item.num}} </button>
+    </view>
+  </view>
+  
+  
+  <!--剩余时间-->
+  
+  <view class="line"></view>
+</view>
+
+<!--排序
+<view class='orderBlock'>
+  
+  <view class='new'>
+    <text>最新信息</text>
+  </view>
+
+  
+  <view class='dpBack'>
+    <text>拿回首付</text>
+  </view>
+
+  
+  <view class="km">
+    <text>剩余公里数</text>
+  </view>
+
+  
+  <view class='rmOrder'>
+    <text>到期时间</text>
+  </view>
+</view>
+<view class='line'></view>
+<!--
+<view>
+<block wx:for='{{topics}}' >
+  <view class='container' bindtap='onItemClick' data-topicId='{{item._id}}'>
+    <view class='container-content'>
+      <view class='user-info'>
+        <image class='user-head' src='{{item.user.avatarUrl}}' mode='aspectFill'></image>
+        <view class='user-name-time'>
+          <view class='user-name'>{{item.user.nickName}}</view>
+         
+        </view>
+      </view>
+      <view class='content'>
+        
+        <block wx:if="{{item.name != ''}} && {{item.images.length > 0}}">
+          <text class='content-text'>{{item.name}}</text>
+          <scroll-view class='content-scroll' scroll-x='true'>
+            <block wx:for="{{item.images}}">
+              <image class='content-img' src='{{item}}' mode='aspectFill'></image>
+            </block>
+          </scroll-view>
+        </block>
+       
+        <block wx:elif="{{item.images.length > 0}}">
+          <scroll-view class='content-scroll' scroll-x='true'>
+            
+              <image class='content-img' src='{{item.images[0]}}' mode='aspectFill'></image>
+            
+          </scroll-view>
+
+        </block>
+       
+        <block wx:else>
+          <text class='content-text'>{{item.year}}</text>
+        </block>
+
+        <block>
+          <view>hleeo</view>
+        </block>
+      </view>
+    </view>
+
+    <view class='container-line'></view>
+  </view>
+</block>
+</view>
+-->
+
+<view class='search-list-container'>
+    <scroll-view scroll-y="true" style="height: 80%;width:100%" wx:for="{{topics}}">
+      <view style='border-top: 1px solid #d1d3d4;' bindtap='goToDetail' data-topicId="{{item._id}}">
+        <view class='search-item-container'>
+          <view class='search-item-image' style='flex:3;'>
+            <image src='{{item.images[0]}}' style=" width: 150px;height:95px"></image>
+          </view>
+          <view class='search-item-info-box' style='flex:4;'>
+            <view style="margin-left:10px;width: 100%;height:100%;display:flex;flex-direction:column">
+              <view class='search-item-title'>{{item.year}} {{item.mode}}</view>
+              
+              <view class='search-item-dates'>
+                到期时间：{{item.dates}}
+              </view>
+              <view class='search-item-km'>
+                剩余公里数：{{item.restKm}} km
+              </view>
+              <view class='search-item-price'>
+                <view class='textback'>拿回:</view>
+                <view class='price'>  ${{item.dpBack}}</view>
+                
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>

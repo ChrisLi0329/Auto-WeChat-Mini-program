@@ -1,0 +1,41 @@
+/* pages/contact/contact.wxss */
+.topBar{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Lline{
+width: 40%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+}
+
+.Rline{
+width: 40%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+
+}
+
+.tbText {
+  color:#989898;
+  font-size: 30rpx;
+  
+}
+
+.QRCode{
+  padding: 60rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.QR {
+  height: 650rpx;
+  width: 500rpx;
+}
+
+.QRText {
+  text-align: center;
+  color: #989898;
+  
+}

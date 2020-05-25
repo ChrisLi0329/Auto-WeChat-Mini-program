@@ -1,0 +1,111 @@
+<!--pages/new_detail/new_detail.wxml-->
+<view class='detail-container'>
+  
+  <view class='swiper-container'>
+    <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
+      <block wx:for="{{topic.images}}" wx:for-index="idx">
+        <swiper-item>
+         <image class='content-img' src='{{item}}' mode='aspectFill' bindtap="previewImg" data-index='{{idx}}'  />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='car_detail'>
+    <view class='car_detail_head'>{{topic.year}} {{topic.mode}}</view>
+    
+    <view class='car_price_box'>
+      <view class='car_price'>
+        <i class='wan'>首付:</i>
+        ${{topic.dp}}
+      </view>
+      <view class='newdp'>车价：${{topic.price}}</view>
+    </view>
+  </view>
+
+
+  <view class='car_info_box'>
+    <view class='car_info_title'>
+      <view class='title_label'></view>
+      <view class='title_info'>车辆信息</view>
+    </view>
+    <view class='car_info'>
+      <view class='car_info_item_box'>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text5" style="color:#abafb3;font-size:14px">汽车年份</text>
+          </view>
+          
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.year}} </text>
+          </view>
+        </view>
+        <span>--------</span>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text11" style="color:#abafb3;font-size:14px">lease时长</text>
+          </view>
+          
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.period}} years</text>
+          </view>
+        </view>
+      </view>
+      
+      
+      
+      <view class='car_info_item_box1'>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text5" style="color:#abafb3;font-size:14px">税后月供</text>
+          </view>
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">${{topic.mPay}}</text>
+          </view>
+        </view>
+        <span>--------</span>
+        <view class='car_info_item'>
+          <view class='car_info_item_title'>
+            <text id="text11" style="color:#abafb3;font-size:14px">可驾驶公里数</text>
+          </view>
+          <view class='car_info_item_content'>
+            <text style="color:#757f89;font-size:16px;font-weight: bold">{{topic.km}}km</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+  
+
+
+  <view class='moreInfo-box'>
+    <view class='more_info_title'>
+      <view class='title_label'></view>
+      <view class='title_info'>更多信息</view>
+    </view>
+    <view class='moreInfo'>
+      <text class='content-text'>{{topic.content}}</text>
+      
+    </view>
+    
+  </view>
+  <view class='liulan'>浏览数：{{topic.liulan}}次</view>
+  
+  <view class="footer-box" wx:if="{{openid != 'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
+    <view class='footer-button'>
+      <button open-type="share" class='share-btn'>分享给好友</button>
+    </view>
+    <view class='footer-button'>
+      <button open-type='contact' class="contact-btn">联系客服</button>
+    </view>
+  </view>
+  <view class="footer-box" wx:if="{{openid == 'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
+    <view class='footer-button'>
+      <button bindtap='handleDelete' class='contact-btn'>删除</button>
+    </view>
+    
+  </view>
+</view>
+
+

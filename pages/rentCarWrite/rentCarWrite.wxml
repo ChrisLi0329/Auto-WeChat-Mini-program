@@ -1,0 +1,125 @@
+<!--miniprogram/pages/rentCarWrite/rentCarWrite.wxml-->
+<view class="topBar">
+  <view class="Lline"></view>
+  <text class="tbText">租车输入</text>
+  <view class="Rline"></view>
+</view>
+
+<form bindsubmit='formSubmit'>
+<!--卖车内容-->
+<view class="saleInfoBox">
+
+  <!--上传图片-->
+  <view class='picBox'>
+    <view class='picText'>上传图片</view>
+    <view class='line'></view>
+    <view class='picUploadBox'>
+      <button type='default' size='default' bindtap='chooseImage'>
+        添加图片（最少3张，最多6张）
+      </button>
+    </view>
+
+    <scroll-view class='image-group' scroll-x = 'true'>
+      <block wx:for='{{images}}' wx:for-index='idx'>
+      <view>
+        <image src='{{images[idx]}}' mode='aspectFill' bindtap='previewImg'></image>
+        <icon type='clear' bindtap='removeImg' data-index='{{idx}}'></icon>
+      </view>
+      </block>
+
+    </scroll-view>
+
+
+  </view>
+
+
+  
+
+  <!--车辆信息-->
+  <view class="carInfoBox">
+    <view class='carInfo'>车辆信息</view>
+    <view class='line'></view>
+    <view class='carInputBox'>
+
+      <!--汽车品牌-->
+      <view class='brandBox'>
+        <view class='brandText'>汽车品牌：</view>
+        <view class='brandPicker'>
+          <picker name='input-mode'mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+            <view class='picker'>
+            {{multiArray[0][multiIndex[0]]}}  {{multiArray[1][multiIndex[1]]}}
+            </view>
+          </picker>
+        </view>
+      </view>
+
+      
+      <!--付款-->
+      <view class='pay'>
+        <view class='dayPay'id='pay'>
+          <view class='dayPayText'>日租金额: </view>
+          <view class='dayPayInput'>
+            <input name='input-dPay' value='{{textdPay}}' placeholder='输入日租金额'/>
+          </view>
+        </view>
+
+        <view class='weekPay' id='pay'>
+          <view class='weekPayText'>周租金额: </view>
+          <view class='weekPayInput'>
+            <input name='input-wPay' value='{{textwPay}}' placeholder='输入周租金额'/>
+          </view>
+        </view>
+
+        <view class='monthPay'id='pay'>
+          <view class='monthText'>月租金额: </view>
+          <view class='monthPayInput'>
+            <input name='input-mPay' value='{{textmPay}}' placeholder='输入月租金额'/>
+          </view>
+        </view>
+      </view>
+
+      <view class='backC'id='pay'>
+          <view class='backCText'>倒车影像: </view>
+          <view class='backCInput'>
+            <input name='input-backC' value='{{textbackC}}' placeholder='输入有或者无'/>
+          </view>
+      </view>
+
+      <view class='blue'id='pay'>
+          <view class='blueText'>蓝牙连接: </view>
+          <view class='blueInput'>
+            <input name='input-blue' value='{{textblue}}' placeholder='输入有或无'/>
+          </view>
+        </view>
+
+        <view class='navi'id='pay'>
+          <view class='naviText'>车载导航: </view>
+          <view class='naviInput'>
+            <input name='input-navi' value='{{textnavi}}' placeholder='输入有或者无'/>
+          </view>
+        </view>
+      
+      
+
+    </view>
+  </view>
+  
+
+
+
+  <!--更多信息-->
+  <view class="moreInfoBox">
+  <view class='moreInfo'>更多信息</view>
+  <view class='line'></view>
+  <view class='textArea'>
+    <textarea style='height: 7em' name="input-content" type="text" placeholder="说点什么吧~" placeholder-class="holder" value="{{textContent}}" bindblur='getTextAreaContent'/>
+  </view>
+  </view>
+</view>
+
+<!--提交-->
+<view class='submit'>
+  <button size='default' class='submitButton' formType='submit' open-type='getUserInfo'>提交</button>
+</view>
+
+</form>

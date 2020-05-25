@@ -1,0 +1,80 @@
+/* pages/home/home.wxss */
+.picContainer{
+  width: 100%;
+  position: relative;
+  
+}
+.homepic{
+   width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height: 466rpx;
+}
+
+.navBlock{
+  width: 100%;
+  margin-top: -8rpx;
+}
+
+.buy {
+  border: 8rpx solid black;
+  text-align: left;
+  border-bottom-style: hidden;
+  padding: 60rpx;
+}
+
+.sales {
+  border: 8rpx solid black;
+  text-align: left;
+  border-bottom-style: none;
+  padding: 60rpx;
+}
+
+.newCar{
+  border: 8rpx solid black;
+  text-align: left;
+  border-bottom-style: none;
+  padding: 60rpx;
+}
+
+.rent{
+  border: 8rpx solid black;
+  text-align: left;
+  border-bottom-style: none;
+  padding: 60rpx;
+}
+
+.newCarInput{
+  border: 8rpx solid black;
+  text-align: left;
+  border-bottom-style: none;
+  padding: 60rpx;
+}
+
+.rentCarInput{
+  border: 8rpx solid black;
+  text-align: left;
+  border-bottom-style: none;
+  padding: 60rpx;
+}
+
+.contact {
+  border: 8rpx solid black;
+  text-align:left;
+  padding: 60rpx;
+}
+
+.mainText {
+  font-size: 50rpx;
+}
+
+.subText {
+  color: gray;
+  font-size:30rpx;
+}
+
+.line{
+width: 80%;
+margin-top: 20rpx;
+border-top:1px #989898 solid;
+}
