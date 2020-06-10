@@ -17,13 +17,13 @@ This is a car selling and buying platform.
 2. Admin has two more features which are "新车输入"（type new car information） and “租车输入"(type rent car information). Those are really convient to type the car information into the database on the mini-program side.
 3. WeChat mini-program has to link the WeChat offical Account. And WeChat offical account owner should set up the customer service feature in WeChat offical account platform in order to the user can contact the customer service in car detail page using "联系客服" green button(this is the API WeChat provided). 
 
-## Code explaination
+# Code explaination
 - Under images folder, there are all the images used for the UI/UX design.
 - Under page folder, there are 11 different pages in the mini-program.
 	- Under each specific page folder, there are wxml, wxss, js, and json files. 
 - Because I use WeChat Cloud develop, there are couple default files in the repo.
 
-## Demo
+# Demo
 <table>
 	<tr>
 		<td><img src="/thunder1.jpg" width="100%"> 
