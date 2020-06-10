@@ -24,11 +24,17 @@ This is a car selling and buying platform.
 - Because I use WeChat Cloud develop, there are couple default files in the repo.
 
 ## Demo
-<img src="/thunder1.jpg" width="100%">
-<img src="/thunder2.jpg" width="100%">
-<img src="/thunder3.jpeg" width="100%">
-<img src="/thunder4.jpeg" width="100%">
-<img src="/thunder5.png" width="100%">
-<img src="/thunder6.jpeg" width="100%">
-<img src="/thunder7.jpeg" width="100%">
+<table>
+	<tr>
+		<td><img src="/thunder1.jpg" width="100%"> 
+		<td><img src="/thunder2.jpg" width="100%">
+		<td><img src="/thunder3.jpeg" width="100%">
+		<td><img src="/thunder4.jpeg" width="100%">
+	</tr>
+	<tr>
+		<td><img src="/thunder5.png" width="100%">
+		<td><img src="/thunder6.jpeg" width="100%">
+		<td><img src="/thunder7.jpeg" width="100%">
+	</tr>
+</table>
 
