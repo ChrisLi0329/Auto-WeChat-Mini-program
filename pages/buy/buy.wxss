@@ -52,8 +52,6 @@ border-top:1px #989898 solid;
 }
 
 
-
-
 .rm {
   display: flex;
   justify-content: space-around;
@@ -93,10 +91,6 @@ border-top:1px #989898 solid;
   font-size: 30rpx;
   margin: 10rpx;
 }
-
-
-
-
 
 .search-list-container {
   background-color: #fff;

@@ -1,6 +1,6 @@
 <!--pages/rent_detail/rent_detail.wxml-->
 <view class='detail-container'>
-  
+  <!--汽车图片-->
   <view class='swiper-container'>
     <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
       <block wx:for="{{topic.images}}" wx:for-index="idx">
@@ -10,10 +10,10 @@
       </block>
     </swiper>
   </view>
-
+  <!--汽车品牌型号-->
   <view class='car_detail'>
     <view class='car_detail_head'> {{topic.mode}}</view>
-    
+    <!--租车价格-->
     <view class='car_price_box'>
       <view class='car_price'>
         <i class='wan'>日租:</i>
@@ -24,7 +24,7 @@
   </view>
 
 
-
+  <!--租车具体信息-->
   <view class='car_info_box'>
     <view class='car_info_title'>
       <view class='title_label'></view>
@@ -97,7 +97,9 @@
   </view>
   
 
-
+  /*
+  更多信息
+  */
   <view class='moreInfo-box'>
     <view class='more_info_title'>
       <view class='title_label'></view>
@@ -109,8 +111,13 @@
     </view>
     
   </view>
+  /*
+  浏览次数
+  */
   <view class='liulan'>浏览数：{{topic.liulan}}次</view>
-  
+  /*
+  footer的两个按钮
+  */
   <view class="footer-box" wx:if="{{openid != 'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid ==  'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
     <view class='footer-button'>
       <button open-type="share" class='share-btn'>分享给好友</button>

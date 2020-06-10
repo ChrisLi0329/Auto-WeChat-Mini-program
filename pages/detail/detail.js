@@ -41,7 +41,8 @@ Page({
       }
     })
   },
- 
+  
+  //改变view的数量
   changeCheck: function(e){
    
    var check = this.data.items

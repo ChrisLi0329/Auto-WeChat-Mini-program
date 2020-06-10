@@ -1,5 +1,7 @@
 <view class='detail-container'>
-  
+  /*
+  图片区域
+  */
   <view class='swiper-container' style='position:absoulte'>
     <swiper class="swiper_box" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
       <block wx:for="{{topic.images}}" wx:for-index="idx">
@@ -9,16 +11,23 @@
       </block>
     </swiper>
   </view>
-
+  /*
+  thunder auto 水印
+  */
   <view class='shuiyin' style='position:relative'>
     <image class='shuiyinpic' src='/images/thunder.png' style='height: 20px; width: 100px'></image>
   </view>
   <view class='car_detail'>
+    /*
+    车辆年份名称
+    */
     <view class='car_detail_head'><view class='head'>{{topic.year}} {{topic.mode}}</view> <view class='dujia'><image class='dujia1' src='/images/dujia.png' style="height:20px; width: 100px" /></view></view>
     
    
   
-    
+    /*
+    具体钱
+    */ 
     <view class='car_price_box'>
       <view class='car_price'>
         <i class='wan'>拿回:</i>
@@ -27,12 +36,13 @@
       <view class='newdp'>原首付：${{topic.dp}}</view>
     </view>
   </view>
-
+  <!--车辆具体信息 -->
   <view class='personal_info_box' wx:if="{{openid ==  'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
     <view class='personal_info_title'>
       <view class='title_label'></view>
       <view class='title_info'>个人信息</view>
     </view>
+    <!--个人具体信息 -->
     <view class='personal_info'>
       <view class='name'>姓名：{{topic.name}}</view>
       <view class='number'>电话号码：{{topic.number}}</view>
@@ -110,7 +120,9 @@
     </view>
     
   </view>
-  
+/*
+特殊项目
+*/
 <checkbox-group class='checkboxGroup'>
     <label class="checkbox" wx:for="{{topic.check}}">
 
@@ -121,7 +133,9 @@
     <radio checked=''/>{{item}}
   </label>
 </checkbox-group>
-
+  /*
+  更多信息
+  */
   <view class='moreInfo-box'>
     <view class='more_info_title'>
       <view class='title_label'></view>
@@ -133,8 +147,14 @@
     </view>
     
   </view>
+  /*
+  浏览次数
+  */
   <view class='liulan'>浏览数：{{topic.liulan}}次</view>
   
+  /*
+  footer的两个按钮
+  */
   <view class="footer-box" wx:if="{{openid !=  'ojg5a5Kl0Xo60V8bouP40CbBeR0U' || openid == 'ojg5a5APYa7dF9Uc1D2I37-d9RSc' }}">
     <view class='footer-button'>
       <button open-type="share" class='share-btn'>分享给好友</button>

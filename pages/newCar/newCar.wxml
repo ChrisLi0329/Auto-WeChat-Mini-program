@@ -1,12 +1,12 @@
-<!--pages/about/about.wxml-->
+<!--pages/newCar/newCar.wxml-->
 
-<!--关于我们的top bar-->
+<!--newCar的top bar-->
 <view class="topBar">
   <view class="Lline"></view>
   <text class="tbText">新车特惠</text>
   <view class="Rline"></view>
 </view>
-
+<!--新车特惠列表-->
 <view class='search-list-container'>
     <scroll-view scroll-y="true" style="height: 80%;width:100%" wx:for="{{topics}}">
       <view style='border-top: 1px solid #d1d3d4;' bindtap='goToDetail' data-topicId="{{item._id}}">

@@ -22,7 +22,7 @@
   <view class="line"></view>
 </view>
 
-<!--排序
+<!--排序-->
 <view class='orderBlock'>
   
   <view class='new'>
